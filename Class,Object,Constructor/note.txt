@@ -1,0 +1,22 @@
+Object
+Là một đối tượng được  mô hình hóa theo các tính chất và hành vi của một đối tượng thực tế
+Common of object:
+State
+Behavior
+Class
+Là một bản blueprint về đối tượnng
+Define : class keyword
+Property - State
+Là thuộc tính hay là tính chất của đối tương
+Để access được thuộc tính $object->property;
+Method - Behavior
+Là phương thức hay là hành vi của đối tượng đó
+Để access được phương thức $object->method();
+$this keyword
+Là một keyword đặc biệt cho phép bạn truy xuất đến các thuộc tính và phương thức của đối tượng hiện tại
+$this->property
+$this->method()
+=> exist inside class
+Constructor promotion
+Truyền thẳng các thuộc tính vào constructor
+PHP sẽ coi các thuộc tính đó là các thuộc tính của đối tượng và là parameter constructor
