@@ -1,0 +1,38 @@
+Promotion Constructor
+Truyền thẳng các thuộc tính vào constructor
+PHP sẽ coi các thuộc tính đó là các thuộc tính của đối tượng và là parameter constructor
+Destructor được gọi khi đối tượng bị hủy
+Khi sử dụng typed property thì nó chuyển thành uninitialized property
+=> Phải khởi tạo giá trị cho nó
+unset => hủy giá trị của biến => uninitialized
+Typed properties and strict types
+Ví dụ khi sử dụng constructor có tham số có kiểu giá liệu là float
+Vẫn có thể pass string
+Nếu không muốn sử dụng strict_types
+<?php
+
+declare(strict_types=1);
+
+class BankAccount
+{
+    public float $balance = 0;
+
+    public function __construct(float $balance)
+    {
+        $this->balance = $balance;
+    }
+}
+
+$account = new BankAccount("100.25"); // error
+var_dump($account->balance);
+Inheritance
+Nếu không khai bảo hàm khởi tạo PHP sẽ scan để tìm đến hàm khởi tạo của lớp Cha
+Gọi phương thức lớp cha parent::
+Để tránh trường hợp lớp con ghi đè lớp cha sử dụng từ khóa final
+Interface  khai báo các constract mà khi các các lớp implement nó phải thực thi
+Phương thức trong interface  không có body
+Có thể có hằng số
+Interface có thể extends bởi các interface khác
+Should
+Khi các lớp sử dụng interface , đối tượng của lớp đó có thể sử dụng các phương thức của interface
+Có thể viết lại body của phương thức interface
