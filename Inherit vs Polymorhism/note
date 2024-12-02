@@ -1,0 +1,8 @@
+Đa hình cho phép đối tượng thể hiện các hành vi  khác nhau ở các giai đoạn khác nhau
+Thông qua : overloading and overriding
+Implement By abstract class và interfaces
+Inheritance
+Là cho phép một lớp con sử dụng lại các thuộc tính và các phương thức của lớp con
+Để tránh trường hợp lớp con ghi đè lớp cha sử dụng từ khóa final
+
+
