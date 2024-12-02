@@ -19,6 +19,13 @@ class HtmlElement{
         }
     }
 
+    public function __invoke(): void
+    {
+        echo "From invoke";
+        echo $this->html('Hello');
+    }
+
+
     public function html(string $content):string
     {
         $html = "<$this->tag";
@@ -37,4 +44,9 @@ $div = new HtmlElement('div');
 $div->id = 'test';
 $div->class = 'dflex';
 //var_dump($div->html('Hello'));
-var_dump($div->id);
+//var_dump($div->id);
+function test($test): void
+{
+     $test();
+}
+test($div);
