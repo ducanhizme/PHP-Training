@@ -1,0 +1,23 @@
+Định nghĩa
+Interface là trong gồm các phương thức thể hiện hành vi và nó không có body
+Có thể có hằng số
+Có thể extends interface khác
+Khi một lớp implement Interface nó bắt buộc phải có các phương thức đó
+Abstract Class
+Bản chất là một class nên nó có thể chứa các phương thức và các thuộc tính
+Có thể có phương thức abstract
+Có ít nhất một phương thức abstract trong class
+Khi một class kế thừa một abstract class thì class đó phải implement tất cả các abstract methods của abstract class.
+Không thể trực tiếp khởi tạo đối tượng đối với abstract class mà chỉ có thể tạo ra anomyous class object
+
+Usages:
+Abstract class
+Khi muốn tạo ra hệ thống kế thừa, cung cấp một base class chứa các phương thức và thuộc tính chung
+Khi muốn mở rộng thay vì sử dụng các interface khi chúng ta khai báo một phương thức mói
+tất cả các lớp dẫn xuất phải bắt buộc cung cấp phưuong thức đó
+Interface
+Khi muốn có hê thống không có quan hệ gì với nhau mà chỉ chia sẻ các hành vi
+Có thể thực hiện được đa kế thừa khi mà chúng ta có thể implement được nhiều interface khác
+
+=> Common and big : abstract
+=> Small and specific : interface
