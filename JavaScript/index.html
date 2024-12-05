@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="message">Hello</h1>
+    <label for="checkBox1">Rate:</label><input type="checkbox" name="rate" id="checkBox1" value="a">
+    <label for="checkBox2">Rate:</label><input type="checkbox" name="rate" id="checkBox2" value="b">
+    <label for="checkBox3">Rate:</label><input type="checkbox" name="rate" id="checkBox3" value="c">
+    <label for="checkBox4">Rate:</label><input type="checkbox" name="rate" id="checkBox4" value="d">
+    <button id="btn">Click Here</button>
+    <button id="reset">Reset</button>
+    <button id="getByTagName">Name</button>
+    <ul class="menu">
+        <li class="menu-item highlight">1</li>
+        <li class="menu-item">2</li>
+        <li class="menu-item">3</li>
+        <li class="menu-item">4</li>
+        <li class="menu-item">5</li>
+    </ul>
+</body>
+<script>
+    // const message = document.getElementById('message');
+    // //get dom element by id if not found return null
+    // const rates = document.getElementsByName('rate');
+    // // console.log(rates);
+    // const reset = document.getElementById('reset');
+    // reset.addEventListener('click', function () {
+    //     message.innerHTML = '';
+    // });
+    // const btn = document.getElementById('btn');
+    // btn.addEventListener('click', function () {
+    //     rates.forEach(function (rate) {
+    //         if (rate.checked) {
+    //             message.innerHTML += rate.value;
+    //         }
+    //     });
+    // });
+    // const getByTagName = document.getElementById('getByTagName');
+    // getByTagName.addEventListener('click', function () {
+    //     let inputs = document.getElementsByTagName('input');
+    //     inputs = Array.from(inputs);
+    //     inputs.forEach(function (input) {
+    //         console.log(input);
+    //     });
+    // });
+    // const menu = document.getElementById('menu');
+    // console.log(menu);
+    // const menuItems = document.getElementsByClassName('menu-item');
+    // const highLight = document.getElementsByClassName('highlight');
+    // console.log(highLight);
+    // console.log(highLight[0].textContent);
+    // console.log(menuItems);
+    // const data = Array.from(menuItems).map(function (item) {
+    //     return item.innerHTML;
+    // });
+    // console.log(data);
+    const message = document.querySelector('#message');
+    // console.log(message.parentElement);
+    const rates= document.querySelectorAll('input[name="rate"]');
+    const highLight = document.querySelector('ul.menu > li.highlight')
+    console.log(highLight.parentElement.childNodes)
+    let previous = highLight.previousElementSibling;
+    while(previous){
+        console.log(previous.innerHTML);
+        previous=previous.previousElementSibling;
+    }
+    const menuItems = document.querySelectorAll('ul.menu > li.menu-item');
+    const inputLabel = document.querySelectorAll('label,input');
+    // let getSiblings = function(item){
+    //     let siblings =[];
+    //     if (!item.parentNode){
+    //         return siblings
+    //     }
+    //     let current = item.parentNode.firstChild;
+    //     while(current){
+    //         if(current.nodeType === 1 && current !==item){
+    //             siblings.push(current);
+    //         }
+    //         current=item.nextSibling
+    //     }
+    //     return siblings
+    // }
+    // console.log(getSiblings(highLight));
+
+</script>
+</html>

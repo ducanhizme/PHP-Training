@@ -1,0 +1,3 @@
+"ninh duc anh",12,ninhducanhninh@gmail.com
+"john doe",15,johndoe@example.com
+"jane smith",14,janesmith@example.com

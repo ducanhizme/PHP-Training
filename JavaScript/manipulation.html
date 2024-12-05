@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="menu"></ul>
+<script>
+    let div = document.createElement('div')
+    div.id = 'message'
+    div.innerHTML = '<h1>Hello</h1>'
+    document.body.appendChild(div)
+    div.append(document.createElement('p').textContent = 'This is a paragraph')
+    let fruits = ['Apple', 'Banana', 'Orange', 'Mango']
+    let ul = document.createElement('ul')
+    fruits.forEach(function (fruit) {
+        let li = document.createElement('li')
+        li.textContent = fruit
+        ul.appendChild(li)
+    })
+    div.append(ul)
+    let menu = document.getElementById('menu')
+    menu.insertAdjacentHTML('beforebegin', '<p>beforebegin</p>')
+    menu.insertAdjacentHTML('afterbegin', '<p>afterbegin</p>')
+    menu.insertAdjacentHTML('beforeend', '<p>beforeend</p>')
+    menu.insertAdjacentHTML('afterend', '<p>afterend</p>')
+    let li = document.createElement('li')
+    li.textContent = 'New Item'
+    menu.replaceChild(li, menu.firstElementChild)
+    menu.removeChild(menu.lastElementChild)
+    while(menu.firstElementChild){
+        menu.removeChild(menu.firstElementChild)
+    }
+    let newMenu = menu.cloneNode(false)
+</script>
+</body>
+</html>
